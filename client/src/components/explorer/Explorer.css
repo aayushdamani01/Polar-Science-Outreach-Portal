@@ -1,0 +1,334 @@
+/* Scope all Explorer styling to this page and its isolated components. */
+.explorer-page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #030712;
+  color: #123047;
+}
+
+.explorer-header {
+  padding: 48px 24px;
+  background: #030712/90;
+}
+
+.explorer-title {
+  max-width: 850px;
+  margin: 0;
+  font-size: 2.75rem;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: #0b5cad;
+}
+
+.explorer-subtitle {
+  max-width: 720px;
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: #587287;
+}
+
+.explorer-search {
+  padding: 0 24px 32px;
+}
+
+.explorer-search-input {
+  min-height: 58px;
+  box-sizing: border-box;
+  border-radius: 0.875rem;
+  color: #123047;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.explorer-search-input:focus {
+  border-color: #1677c8;
+  background: #030712;
+  box-shadow: 0 0 0 4px rgba(22, 119, 200, 0.14);
+}
+
+.explorer-main {
+  padding-bottom: 64px;
+}
+
+.explorer-controls {
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.explorer-view-tab {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 0.5rem;
+  color: #587287;
+  user-select: none;
+}
+
+.explorer-view-tab.active {
+  color: #ffffff;
+  background: #0b5cad;
+  box-shadow: 0 5px 14px rgba(11, 92, 173, 0.2);
+}
+
+.explorer-globe-control {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 15px;
+  border: 1px solid #dcefff;
+  border-radius: 0.5rem;
+  background: #030712;
+  color: #1677c8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  user-select: none;
+}
+
+.explorer-globe-control:first-child {
+  color: #ffffff;
+  border-color: #0b5cad;
+  background: #0b5cad;
+}
+
+.explorer-content-grid {
+  align-items: start;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: minmax(0, 1fr) 360px;
+}
+
+.explorer-globe-panel {
+  min-width: 0;
+}
+
+.explorer-globe-stage {
+  position: relative;
+  min-height: 430px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 1.25rem;
+}
+
+.explorer-globe-stage::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(180deg, rgba(245, 250, 255, 0.08), rgba(8, 40, 72, 0.14));
+}
+
+.explorer-eyebrow {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.explorer-side-panel {
+  min-width: 0;
+}
+
+.explorer-expedition-panel {
+  padding: 24px;
+  border-radius: 1rem;
+  background: rgba(245, 250, 255, 0.72);
+}
+
+.explorer-expedition-panel h3,
+.explorer-timeline h3 {
+  margin: 0 0 18px;
+  color: #0b5cad;
+  font-size: 1.25rem;
+}
+
+.explorer-expedition-panel p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.explorer-stats-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.explorer-stat-card {
+  position: relative;
+  min-width: 0;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 0.875rem;
+}
+
+.explorer-stat-label {
+  min-height: 32px;
+  margin: 0 0 8px;
+  color: #587287;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  line-height: 1.25;
+}
+
+.explorer-stat-value {
+  margin: 0;
+  color: #f5fafb;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.explorer-timeline-panel {
+  margin-top: 32px;
+}
+
+.explorer-timeline-heading {
+  margin-bottom: 28px;
+}
+
+.explorer-timeline-heading h4 {
+  margin: 0 0 4px;
+  color: #0b5cad;
+  font-size: 1rem;
+}
+
+.explorer-timeline-heading p {
+  margin: 0;
+  color: #587287;
+  font-size: 0.75rem;
+}
+
+.explorer-timeline-legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+}
+
+.explorer-timeline-track {
+  position: relative;
+  height: 180px;
+  border-bottom: 1px solid #dcefff;
+  overflow: hidden;
+}
+
+.explorer-timeline-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #587287;
+  font-size: 0.75rem;
+}
+
+.explorer-sections {
+  padding: 72px 24px;
+  background: linear-gradient(135deg, #1B1033, #321A52);
+}
+
+.visual-explorer,
+.researcher-explorer {
+  padding: 40px;
+  border-radius: 1.25rem;
+}
+
+.visual-explorer h2,
+.researcher-explorer h2 {
+  margin: 0 0 14px;
+  color: #0b5cad;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+.visual-explorer p,
+.researcher-explorer p {
+  max-width: 760px;
+  margin: 0;
+  line-height: 1.75;
+  color: #587287;
+}
+
+@media (max-width: 1024px) {
+  .explorer-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explorer-side-panel {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .explorer-expedition-panel,
+  .explorer-timeline-panel {
+    margin-top: 0;
+  }
+
+  .explorer-stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .explorer-header {
+    padding: 34px 18px;
+  }
+
+  .explorer-title {
+    font-size: 2.1rem;
+  }
+
+  .explorer-subtitle {
+    font-size: 1rem;
+  }
+
+  .explorer-search {
+    padding: 0 18px 24px;
+  }
+
+  .explorer-main {
+    padding: 0 18px 48px;
+  }
+
+  .explorer-controls {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .explorer-globe-control {
+    flex: 1 1 130px;
+  }
+
+  .explorer-globe-stage {
+    min-height: 340px;
+  }
+
+  .explorer-side-panel {
+    display: block;
+  }
+
+  .explorer-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .explorer-stat-value {
+    font-size: 2rem;
+  }
+
+  .explorer-timeline-track {
+    height: 150px;
+  }
+
+  .explorer-sections {
+    padding: 48px 18px;
+  }
+
+  .visual-explorer,
+  .researcher-explorer {
+    padding: 28px 22px;
+  }
+}
