@@ -4,7 +4,7 @@ import axios from 'axios';
 // separate base URL / env var is needed in dev. In production this should
 // point at wherever the API is actually deployed.
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
 });
 
 api.interceptors.request.use((config) => {
