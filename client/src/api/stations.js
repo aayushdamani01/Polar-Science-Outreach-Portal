@@ -1,5 +1,6 @@
+import api from './client.js';
+
 export async function fetchResearchStations() {
-  const res = await fetch('/api/explorer/stations');
-  const json = await res.json();
-  return json.data || [];
+  const res = await api.get('/explorer/stations');
+  return res.data.data || [];
 }
